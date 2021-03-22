@@ -1,6 +1,8 @@
-package nure.ua.restservice.services.implementations;
+package nure.ua.restservice.services.implementations.mock;
 
 import nure.ua.restservice.contract.Car;
+import nure.ua.restservice.contract.CarFactory;
+import nure.ua.restservice.entities.FactoryEntity;
 import nure.ua.restservice.services.CarService;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
@@ -36,6 +38,21 @@ public class MockCarService implements CarService {
         car.setId(currentId++);
         cars.put(car.getId(), car);
         return Optional.of(car.getId());
+    }
+
+    @Override
+    public List<Car> getFactoryCars(Long factoryId) {
+        return null;
+    }
+
+    @Override
+    public List<Car> getPersonCars(Long personId) {
+        return null;
+    }
+
+    @Override
+    public void addFactory(CarFactory carFactory) {
+
     }
 
     @Override

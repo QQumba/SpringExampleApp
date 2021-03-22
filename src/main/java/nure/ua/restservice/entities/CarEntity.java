@@ -29,7 +29,7 @@ public class CarEntity extends BaseEntity{
     @JoinColumn(name = "person_id")
     private PersonEntity person;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "car_factory",
             joinColumns = @JoinColumn(name = "car_id",
                     referencedColumnName = "id"),

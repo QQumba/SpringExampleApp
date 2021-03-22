@@ -7,12 +7,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CarMapper {
-    public Car map(@NotNull CarEntity entity){
+    public Car map(@NotNull CarEntity carEntity){
         return new Car()
-                .setId(entity.getId())
-                .setModelName(entity.getModelName())
-                .setMaxSpeed(entity.getMaxSpeed())
-                .setHasAutomaticTransmission(entity.getHasAutomaticTransmission());
+                .setId(carEntity.getId())
+                .setModelName(carEntity.getModelName())
+                .setMaxSpeed(carEntity.getMaxSpeed())
+                .setHasAutomaticTransmission(carEntity.getHasAutomaticTransmission());
     }
 
     public CarEntity map(@NotNull Car car){
